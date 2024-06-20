@@ -21,8 +21,10 @@ const Index = () => {
     setSynth(newSynth);
 
     const handleKeyDown = (event) => {
+      console.log(`Key pressed: ${event.key}`);
       const key = keys.find(k => k.key === event.key);
       if (key) {
+        console.log(`Playing note: ${key.note}`);
         playNote(key.note);
       }
     };
