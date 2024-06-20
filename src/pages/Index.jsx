@@ -19,7 +19,8 @@ const Index = () => {
   useEffect(() => {
     const newSynth = new Tone.Synth().toDestination();
     setSynth(newSynth);
-  const handleKeyDown = (event) => {
+
+    const handleKeyDown = (event) => {
       const key = keys.find(k => k.key === event.key);
       if (key) {
         playNote(key.note);
