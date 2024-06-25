@@ -43,13 +43,13 @@ const Index = () => {
   };
 
   return (
-    <Container centerContent maxW="container.md" height="100vh" display="flex" flexDirection="column" justifyContent="center" alignItems="center" bg="gray.900" color="white">
+    <Container centerContent maxW="container.md" height="100vh" display="flex" flexDirection="column" justifyContent="center" alignItems="center" bg="background.100" color="text.900">
       <VStack spacing={4}>
         <Text fontSize="4xl" fontWeight="bold">Virtual Piano</Text>
         <Text fontSize="lg">Press the keys to play music</Text>
         <Flex>
           {keys.map((key) => (
-            <Button key={key.note} onClick={() => playNote(key.note)} m={1} p={6} bg="gray.700" _hover={{ bg: "gray.600" }}>
+            <Button key={key.note} onClick={() => playNote(key.note)} m={1} p={6} bg="background.300" _hover={{ bg: "background.400" }}>
               {key.label} ({key.key.toUpperCase()})
             </Button>
           ))}
